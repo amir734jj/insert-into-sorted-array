@@ -56,7 +56,13 @@ public class Driver {
     public void test05() {
         Random rand = new Random();
         int i = 100;
-        while (i-- >= 0) insert(rand.nextInt(100), array, count++, Integer::compareTo);
+        while (i-- >= 0) {
+            insert(rand.nextInt(100), array, count++, Integer::compareTo);
+
+            if (!isSorted(array, count, Integer::compareTo)) {
+                System.out.println("Bad!");
+            }
+        }
         assertTrue(isSorted(array, count, Integer::compareTo));
     }
 
@@ -72,18 +78,16 @@ public class Driver {
      * @param <E>   generic parameter E
      */
     private <E> void insert(E e, E[] arr, int count, Comparator<E> comp) {
-        if (count == 0) arr[0] = e;
+        if (count == 0) {
+            arr[0] = e;
+            return;
+        }
 
         for (int i = 0; i < count; i++) {
             if (comp.compare(arr[i], e) >= 0) {
                 // we found an element that is >= to e
                 // we want to add new element at index i, currently arr[i] is occupied
                 // by larger element, so we need to adjust
-                if (i != 0) {
-                    i--;
-                } else {
-                    System.out.println(i);
-                }
             } else if (i + 1 == count) {
                 // this is the last iteration of the loop so we want to add element at i + 1
                 i++;
