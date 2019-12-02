@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/Desktop/Repos/Benchmarking-LoaderService" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/Repos/MI-Benchmarking-LoaderService" value="PREVIEW" />
+        <entry key="$USER_HOME$/Desktop/Repos/scala-spark-test" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../MI-Package-To-Import" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../lagom-scala-sbt" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ScalaSbtSettings">
+    <option name="customVMPath" />
+  </component>
+</project>
